@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "cd734008-4e19-4147-9e44-0ee2782c721a",
+		"name": "imdb_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16684723"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/movies/?page=3&ordering=-release_date&ordering=vote_average&original_language=it",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movies/?page=3&ordering=-release_date&ordering=vote_average&original_language=it",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						},
+						{
+							"key": "ordering",
+							"value": "-release_date"
+						},
+						{
+							"key": "ordering",
+							"value": "vote_average"
+						},
+						{
+							"key": "original_language",
+							"value": "it"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/upload-csv/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/adarsh/Downloads/movies_data_assignment.numbers"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/upload-csv/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload-csv",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
